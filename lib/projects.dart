@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/project_card.dart';
 
 class Projects extends StatefulWidget {
   @override
@@ -77,141 +78,23 @@ class _ProjectsState extends State<Projects> {
                     itemCount: 2,
                     itemBuilder: (context, index) {
                       if (index == 0) {
-                        return Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            width: MediaQuery.of(context).size.width * 0.7,
-                            height: 150,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromRGBO(149, 157, 165, 0.2),
-                                  blurRadius: 24,
-                                  spreadRadius: 0,
-                                  offset: Offset(
-                                    0,
-                                    8,
-                                  ),
-                                ),
-                              ],
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Bus Tracking Application',
-                                        style: GoogleFonts.anonymousPro(
-                                          fontSize: 25,
-                                          color: const Color.fromARGB(
-                                              255, 0, 0, 0),
-                                        ),
-                                      ),
-                                      Divider(
-                                        color: Colors.black,
-                                        indent: 100,
-                                        endIndent: 100,
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        'lib/assets/bus.png',
-                                        scale: 1.5,
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 50.0),
-                                        child: SizedBox(
-                                          width: 500,
-                                          height: 400,
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              Text(
-                                                "This project features two Flutter applications for real-time bus location tracking, designed initially for a college bus system but scalable to larger transport networks. Driver App: Enables bus drivers to send real-time location updates to Firebase. User App: Allows users to select bus routes and view real-time bus locations on a map. Technologies Used: Flutter, Dart, Firebase Realtime Database, Mapbox Maps API, Firebase Authentication.",
-                                                style: GoogleFonts.openSans(
-                                                    fontSize: 17),
-                                              ),
-                                              ElevatedButton(
-                                                onPressed: () {},
-                                                child: Row(
-                                                  children: [Text('GitHub')],
-                                                ),
-                                                style: ButtonStyle(
-                                                    foregroundColor:
-                                                        MaterialStatePropertyAll(
-                                                            Colors.black),
-                                                    backgroundColor:
-                                                        MaterialStatePropertyAll(
-                                                            Color.fromARGB(255,
-                                                                255, 255, 255)),
-                                                    side:
-                                                        MaterialStatePropertyAll(
-                                                            BorderSide(
-                                                                color: Colors
-                                                                    .black)),
-                                                    surfaceTintColor:
-                                                        MaterialStatePropertyAll(
-                                                            Colors.transparent)),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                        return ProjectCard(
+                          title: 'Bus Tracking Application',
+                          description:
+                              "This project features two Flutter applications for real-time bus location tracking, designed initially for a college bus system but scalable to larger transport networks. Driver App: Enables bus drivers to send real-time location updates to Firebase. User App: Allows users to select bus routes and view real-time bus locations on a map. Technologies Used: Flutter, Dart, Firebase Realtime Database, Mapbox Maps API, Firebase Authentication.",
+                          imagepath: "lib/assets/bus.png",
+                          ghurl:
+                              'https://github.com/anand-106/bus_tracking_application',
                         );
                       }
                       if (index == 1) {
-                        return Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            width: MediaQuery.of(context).size.width * 0.7,
-                            height: 150,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromRGBO(149, 157, 165, 0.2),
-                                  blurRadius: 24,
-                                  spreadRadius: 0,
-                                  offset: Offset(
-                                    0,
-                                    8,
-                                  ),
-                                ),
-                              ],
-                              color: Color.fromARGB(255, 142, 61, 61),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Card ${index + 1}',
-                                style: GoogleFonts.firaCode(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
+                        return ProjectCard(
+                          title: 'All-in-KTU App',
+                          description:
+                              "An essential tool designed specifically for B.Tech students of KTU (APJ Abdul Kalam Technological University). The app aims to assist students in managing various academic tasks throughout their B.Tech journey. Currently, in its pre-release stage, the app features a CGPA/SGPA calculator, with many more functionalities planned for future updates.",
+                          imagepath: "lib/assets/ktu.png",
+                          ghurl:
+                              'https://github.com/anand-106/All-in-one-KTU_APP',
                         );
                       }
                     },

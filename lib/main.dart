@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio/about.dart';
 import 'package:portfolio/projects.dart';
+import 'package:portfolio/skills.dart';
 
 void main() {
   runApp(
@@ -55,6 +56,10 @@ void main() {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Projects(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Skill(),
                   )
                 ],
               ),

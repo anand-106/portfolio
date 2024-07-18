@@ -47,6 +47,7 @@ class About extends StatelessWidget {
           Image.asset(
             'lib/assets/anand.png',
             alignment: Alignment.centerRight,
+            color: Colors.black,
           )
         ],
       ),
