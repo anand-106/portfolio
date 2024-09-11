@@ -12,7 +12,7 @@ class Skill extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'PROJECTS',
+              'SKILLS',
               style: GoogleFonts.firaCode(fontSize: 35),
             ),
             Divider(
